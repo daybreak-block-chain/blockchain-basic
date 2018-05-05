@@ -77,3 +77,22 @@ Browser Solidity(Remix) : https://remix.ethereum.org
 1. 위에서 생성한 계약의 주소를 복사해서 At Adress 우측에 입력 후 버튼 클릭 <br>
 접근된 계약의 정보가 하단에 표시
 ![HelloWorld](/chap3/img/Browser_Solidity_At_Address_1.png)
+
+### 3.3.5 기존 계약에 접근2
+Browser Solidity에서 배포한 계약에 콘솔로 접근
+1. 기존 게약 접근에 필요한 ABI(3.2.4 에서 확인), 계약주소(3.3.3 에서 확인) 확인
+
+2. 3.2.4에서 가져온 ABI 값의 줄 바꿈 제거 후 Geth 콘솔에서 abi 변수에 대입(작은 따옴표로 감싸준다)
+> abi = '[{"constant": false,"inputs": [{"name": "_greeting","type": "string"}],"name": "setGreeting","outputs": [],"payable": false,"stateMutability": "nonpayable","type": "function"},{"inputs": [{"name": "_greeting","type": "string"}],"payable": false,"stateMutability": "nonpayable","type": "constructor"},{"constant": true,"inputs": [],"name": "greeting","outputs": [{"name": "","type": "string"}],"payable": false,"stateMutability": "view","type": "function"},{"constant": true,"inputs": [],"name": "say","outputs": [{"name": "","type": "string"}],"payable": false,"stateMutability": "view","type": "function"}]'
+
+  ![HelloWorld](/Users/jang/git/blockchain-basic/chap3/img/Browser_Solidity_Contract_1.png)
+
+3. 계약 객체 생성
+> contract = eth.contract(JSON.parse(abi)).at('0x7134212bfc8bc3e250cc0e2c4e9a84a7a83172da')
+
+  ![HelloWorld](/Users/jang/git/blockchain-basic/chap3/img/Browser_Solidity_Contract_2.png)
+
+4. say 메소드 실행
+> contract.say.call()
+
+  ![HelloWorld](/Users/jang/git/blockchain-basic/chap3/img/Browser_Solidity_Contract_3.png)
