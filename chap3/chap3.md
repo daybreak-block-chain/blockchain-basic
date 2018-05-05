@@ -75,4 +75,4 @@ Browser Solidity(Remix) : https://remix.ethereum.org
 
 ### 3.3.4 기존 계약에 접근
 1. 위에서 생성한 계약의 주소를 복사해서 At Adress 우측에 입력 후 버튼 클릭
-![HelloWorld](/Users/jang/git/blockchain-basic/chap3/img/Browser_Solidity_At_Address_1.png)
+![HelloWorld](/chap3/img/Browser_Solidity_At_Address_1.png)
