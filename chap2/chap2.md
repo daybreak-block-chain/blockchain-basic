@@ -143,8 +143,8 @@ Etther 송금(실행결과는 발행한 트랜잭션 ID)
 트랜잭션을 처리하기 위해서는 수수료(gas)가 필요
 gas는 블록을 만들 때 주는 보상과 마찬가지로 채굴자(Etherbase)에게 지불됨
 
-트랜잭션 정보 확인
-gas : 90000 // 지불 가능한 최대 gas, 실제 해당 트랜잭션을 처리하는데 지불한 gas는 아님
+트랜잭션 정보 확인 <br>
+gas : 90000 // 지불 가능한 최대 gas, 실제 해당 트랜잭션을 처리하는데 지불한 gas는 아님 <br>
 gasPrice : 18000000000 //1Gas의 가격, 단위 wei/gas
 >eth.getTransaction("0xd3c1f71e5d20fcbc8e34a130c4b93bf6228aa1cd60377d4513668407be1fe9fd")
 {
@@ -169,24 +169,24 @@ gasPrice : 18000000000 //1Gas의 가격, 단위 wei/gas
 web3.toWei(0.000347, 'ether') / 18000000000 = 19277.777777777777 gas
 
 ### 2.4.5 백그라운드로 Geth 기동
-Geth 백그라운드 실행 및 채굴
---mine  //채굴 활성화
---minerthreads 1  //채굴에 사용할 CPU 스레드 수
+Geth 백그라운드 실행 및 채굴 <br>
+--mine  //채굴 활성화 <br>
+--minerthreads 1  //채굴에 사용할 CPU 스레드 수 <br>
 --rpc //HTTP-RPC 서버 활성화
 >nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc 2>> /Users/jang/data_testnet/geth.log &
 
 ### 2.4.6 JSON-RPC
-Geth 기동 시 HTTP-RPC 서버 활성화 해서 원격으로 명령 실행 하기위한 실행 방법
---rpc //HTTP-RPC 서버 활성화
---rpcaddr "0.0.0.0" //HTTP-RPC 서버의 수신 IP 설정
---rpcport 8545  //HTTP-RPC 서버가 요청을 받기 위해 사용하는 포트 지정
---rpccorsdomain "*" //자신의 노드에 RPC로 접속할 IP 주소 지정, 쉼표로 구분해 여러 개를 지정 가능, "*"로 지정하면 모든 IP에서 접속 허용
+Geth 기동 시 HTTP-RPC 서버 활성화 해서 원격으로 명령 실행 하기위한 실행 방법 <br>
+--rpc //HTTP-RPC 서버 활성화 <br>
+--rpcaddr "0.0.0.0" //HTTP-RPC 서버의 수신 IP 설정 <br>
+--rpcport 8545  //HTTP-RPC 서버가 요청을 받기 위해 사용하는 포트 지정 <br>
+--rpccorsdomain "*" //자신의 노드에 RPC로 접속할 IP 주소 지정, 쉼표로 구분해 여러 개를 지정 가능, "*"로 지정하면 모든 IP에서 접속 허용 <br>
 --rpcapi "admin,db..."  //RPC를 허가할 명령 지정
 >nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,ssh,txpool,personal,web3" 2 >> /Users/jang/data_testnet/geth.log &
 
 ### 2.4.7 Geth 기동 시 계정 잠금 해제
-Geth 기동 시 지정한 계정을 잠금 해제
---unlock 0  //잠금 해제할 계정 지정
+Geth 기동 시 지정한 계정을 잠금 해제 <br>
+--unlock 0  //잠금 해제할 계정 지정 <br>
 --verbosity 6 //로그 출력 수준 지정(default=3), 0=slient, 1=error, 2=warn, 3=info, 4=core, 5=debug, 6=detail
 >geth --networkid 4949 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,ssh,txpool,personal,web3" --unlock 0 --verbosity 6 console 2>> /Users/jang/data_testnet/geth.log
 
