@@ -85,14 +85,14 @@ Browser Solidity에서 배포한 계약을 콘솔로 접근
 2. 3.2.4에서 가져온 ABI 값의 줄 바꿈 제거 후 Geth 콘솔에서 abi 변수에 대입(작은 따옴표로 감싸준다)
 > abi = '[{"constant": false,"inputs": [{"name": "_greeting","type": "string"}],"name": "setGreeting","outputs": [],"payable": false,"stateMutability": "nonpayable","type": "function"},{"inputs": [{"name": "_greeting","type": "string"}],"payable": false,"stateMutability": "nonpayable","type": "constructor"},{"constant": true,"inputs": [],"name": "greeting","outputs": [{"name": "","type": "string"}],"payable": false,"stateMutability": "view","type": "function"},{"constant": true,"inputs": [],"name": "say","outputs": [{"name": "","type": "string"}],"payable": false,"stateMutability": "view","type": "function"}]'
 
-  ![HelloWorld](/chap3/img/Browser_Solidity_Contract_1.png)
+  ![Contract](/chap3/img/Browser_Solidity_Contract_1.png)
 
 3. 계약 객체 생성
 > contract = eth.contract(JSON.parse(abi)).at('0x7134212bfc8bc3e250cc0e2c4e9a84a7a83172da')
 
-  ![HelloWorld](]/chap3/img/Browser_Solidity_Contract_2.png)
+  ![Contract](/chap3/img/Browser_Solidity_Contract_2.png)
 
 4. say 메소드 실행
 > contract.say.call()
 
-  ![HelloWorld](/chap3/img/Browser_Solidity_Contract_3.png)
+  ![Contract](/chap3/img/Browser_Solidity_Contract_3.png)
