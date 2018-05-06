@@ -11,7 +11,7 @@ Geth background rpc 실행
 
 >geth attach rpc:http://localhost:8545
 
-### 3.2.1 콘솔에서 계갹 만들기 - HelloWorld
+### 3.2.1 콘솔에서 계약 만들기 - HelloWorld
 사용자가 설정한 문자열을 반환하는 계약
 
 ```javascript
