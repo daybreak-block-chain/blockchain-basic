@@ -78,4 +78,3 @@ Crowdsale
 
 크라우드 세일 주소에 5000 송금
   "0x06d5b4d5dc92b8375b97cb0cad08d6e86a4ab1d6", 5000
-  
