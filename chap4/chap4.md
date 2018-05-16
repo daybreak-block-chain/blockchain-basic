@@ -58,23 +58,32 @@ eth.accounts[1]: 0xe3914bd95eb83a70b71255f80df8115fb9c41501	 balance: 3004.99484
 eth.accounts[2]: 0x40d25c22152e50f2278b0e5ba2a609fee6e2b2d7	 balance: 10ether
 
 생성할 토큰 정보(Create)
-  10000, "OreOreCoin", "oc", 0
+  10000, "DayBreak", "db", 0
 
 크라우드 세일 정보
   목표금액 : 10ether
   기한 : 15분
   토큰가격 : 1/100ether //1ether = 100oc
   전체토큰 : 5000oc
-  얼리버드
+  조기구매특전
+  - 개시에서 3분  미만 100% 추가지급
+  - 개시에서 5분  미만  50% 추가지급
+  - 개시에서 10분 미만  20% 추가지급
+  - 10분 경과 후에는 추가 지급 없음 0%
 
-OreOreCoin
-  block 3571
-  0xd2b0cc89abd8471a8ddfe235096741026e61b951
+DayBreak
+  block 4966
+  0x74ee4e87e74935de1378ae9302163e70f4ca8ab3
 
-Crowdsale
-  10, 5000, 100, "0xd2b0cc89abd8471a8ddfe235096741026e61b951"
-  block 3584
-  0x06d5b4d5dc92b8375b97cb0cad08d6e86a4ab1d6
+crowd sale(목표금액, 준비한 토큰의 양, 토큰가격(1ether당 토큰량 1:10), 토큰 주소)
+  10, 5000, 100, "0x74ee4e87e74935de1378ae9302163e70f4ca8ab3"
+  block 4076
+  0x5986e0c6fd0dcbec5546b2be517bb72bf8530240
 
-크라우드 세일 주소에 5000 송금
-  "0x06d5b4d5dc92b8375b97cb0cad08d6e86a4ab1d6", 5000
+OreOreCoin > transfer, 크라우드 세일 주소에 5000 송금
+  "0xa5de48f644db4a385c230aaa1b6356cf1ce48876", 5000
+
+
+
+Gas limit 으로 console 에서 작업
+cat crowd_sale_abi.txt | tr -d '\n' > crowd_sale_abi2.txt

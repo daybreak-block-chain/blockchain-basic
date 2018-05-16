@@ -1,4 +1,4 @@
-//geth에서 loadScript('script 경로'); 로 javascript로 작성한 메소드 사용 가능
+//geth에서 loadScript('script 경로') 입력
 //loadScript('git/blockchain-basic/chap2/balance.js')
 
 function checkAllBalances() {
