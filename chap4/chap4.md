@@ -50,7 +50,7 @@ OreOreCoin
 
 ### 4.5.3 계약 실행
 크라우드 세일 달성 목표 - 10ether
-1ether = 100oc, 최대 5000oc 발행
+1ether = 100oc, 최대 5000oc 발행c
 판매기간 15분
 
 eth.accounts[0]: 0xfa501cae369107a5010d1842b0ada628ab5b9f33	 balance: 14344.00515159999999998ether
