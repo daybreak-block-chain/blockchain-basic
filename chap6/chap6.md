@@ -1,6 +1,6 @@
 ### 6.3 예측 곤란성 확보하기
 블록마다 값을 다르게 하기 위해 블록 해시 값을 사용 -> block.blockhash() 글로벌 함수 사용해서 가져옴
-블록 해시 값은 블록별로 다르며 타임스탬프보다 사전 예측이 곤란한 값으로 처기 가능
+블록 해시 값은 블록별로 다르며 타임스탬프보다 사전 예측이 곤란한 값으로 처리 가능
 
 1. 마지막 블록 번호 확인
 >eth.blockNumber
@@ -20,6 +20,16 @@ Geth Console에서 확인한 hash 값과 동일함
 5. 결과 확인 -> status 0 - 난수 생성 성공 <br>
    drawnNumber 확인 <br>
    blockHash 값 확인 - request 때 생성된 블록넘버 + 1 의 블록 해시 값
+
+blockNumber - 4857
+hash - 0x139fe6ac1bb5e14c5e6a74ccbe45abb9f2f8901cf9c2f76320006c00d6118192
+
+blockNumber - 4858
+hash - 0x8e35d6107a94c006530a1a3f5cac4964744364c9bb3276c417d86e12cb3be8d2
+hash - 0x8e35d6107a94c006530a1a3f5cac4964744364c9bb3276c417d86e12cb3be8d2
+
+
+
 
 ### 6.3.3 고찰
 get() 함수의 실행이 트랜잭션으로 처리 -> 응답성이 안좋음
