@@ -259,6 +259,13 @@ web3.toWei(0.000347, 'ether') / 18000000000 = 19277.777777777777 gas
   - rpc : HTTP-RPC 서버 활성화
 > nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc 2>> /Users/jang/data_testnet/geth.log &
 
+#### Geth 백그라운드 실행 안되는 경우 해결법
+![Geth Connection](/chap2/img/![Geth Connection](/chap3/img/Browser_Solidity_Geth_Background_1.gif)
+  1. 위 명령어 실행 후 터미널에 jobs 입력
+  2.
+
+
+
 
 ### 2.4.6 JSON-RPC
 - Geth 기동 시 HTTP-RPC 서버 활성화 해서 원격으로 명령 실행 하기위한 실행 방법 <br>
