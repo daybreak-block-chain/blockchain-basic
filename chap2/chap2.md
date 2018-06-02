@@ -260,9 +260,11 @@ web3.toWei(0.000347, 'ether') / 18000000000 = 19277.777777777777 gas
 > nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc 2>> /Users/jang/data_testnet/geth.log &
 
 #### Geth 백그라운드 실행 안되는 경우 해결법
-![Geth Connection](/chap2/img/![Geth Connection](/chap3/img/Browser_Solidity_Geth_Background_1.gif)
+![Geth 백그라운드 실행 방법](/chap2/img/Browser_Solidity_Geth_Run.gif)
+
   1. 위 명령어 실행 후 터미널에 jobs 입력
-  2.
+  2. Stopped 상태면 제일 앞의 번호 확인 후 bg 1(번호 입력)
+  3. jobs 명령어 입력 후 Running 상태 변경 확인
 
 
 
