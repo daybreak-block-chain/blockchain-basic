@@ -1,5 +1,36 @@
+## 2. 이더리움이란?
+- [공식사이트 - https://www.ethereum.org/](https://www.ethereum.org/)
+> 이더리움이란 특별히 정해진 구현 방법을 말하는 것이 아니라 스마트 계약을 실행할 수 있는 플랫폼
+
+### 2.2 Geth(Go-Ethereum) 설치
+- 맥 OS에 설치 방법 - [참고](https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Mac)
+- Homebrew를 이용한 설치([Homebrew 설치](https://brew.sh/index_ko))
+- 터미널에서 아래의 명령어 실행
+```
+brew tab ethereum/ethereum
+brew install ethereum
+```
+
 ### 2.3 Geth 기동
-> geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet console 2>> /Users/jang/data_testnet/geth.log
+- data_testnet 폴더 생성 후 genesis.json 파일 추가
+```
+{
+	"config": {},
+	"nonce": "0x0000000000000042",
+	"timestamp": "0x0",
+	"parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+	"gasLimit": "0x8000000",
+	"difficulty": "0x4000",
+	"mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+	"alloc": {}
+}
+```
+- Geth 초기화(경로는 사용자에 맞게 변경)
+>geth --datadir /Users/jang/data_testnet init /Usersjang/data_testnet/genesis.json
+
+
+- Geth 실행
+>geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet console 2>> /Users/jang/data_testnet/geth.log
 
 
 ### 2.4.1 계정 생성
@@ -171,7 +202,7 @@ web3.toWei(0.000347, 'ether') / 18000000000 = 19277.777777777777 gas
 ### 2.4.5 백그라운드로 Geth 기동
 Geth 백그라운드 실행 및 채굴 <br>
 --mine  //채굴 활성화 <br>
---minerthreads 1  //채굴에 사용할 CPU 스레드 수 <br>
+--minerthreads 1  //채굴에 사용할 CPU  a스레드 수 <br>
 --rpc //HTTP-RPC 서버 활성화
 >nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc 2>> /Users/jang/data_testnet/geth.log &
 
