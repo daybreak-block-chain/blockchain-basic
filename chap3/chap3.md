@@ -51,7 +51,7 @@ contract HelloWorld {
 
 ### 3.2.4 계약 배포
 - ABI(Application Binary Interface) : 계약의 외부 사양으로 계약에 포함되는 인수, 반환값에대한 정보로 계약에 접근할 때 필요한 정보 중 하나
-- Browser Solidiry에서 계약 생성 후 아래의 방법으로 확인 가능
+- Browser Solidity에서 계약 생성 후 아래의 방법으로 확인 가능
   1. Compile > 계약선택 > Detail 선택 <br>
   ![ABI 1](/chap3/img/Browser_Solidity_ABI_1.png) <br><br>
   2. 팝업 창에서 ABI 확인 <br>
