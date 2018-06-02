@@ -10,7 +10,7 @@ OreOreCoin - accounts[0] 소유의 토큰
   block 2762
   0x4abe43525c1ab648a42c1e2e76685f711f8eadde
 
-## 4.2 블랙리스트 기능 추rk
+## 4.2 블랙리스트 기능 추가
 
 OreOreCoin
   block 2948
