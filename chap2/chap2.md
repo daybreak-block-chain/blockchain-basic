@@ -257,9 +257,8 @@ web3.toWei(0.000347, 'ether') / 18000000000 = 19277.777777777777 gas
   - mine : 채굴 활성화
   - minerthreads 1  : 채굴에 사용할 CPU  a스레드 수
   - rpc : HTTP-RPC 서버 활성화
-```
-nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc 2>> /Users/jang/data_testnet/geth.log &
-```
+> nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc 2>> /Users/jang/data_testnet/geth.log &
+
 
 ### 2.4.6 JSON-RPC
 - Geth 기동 시 HTTP-RPC 서버 활성화 해서 원격으로 명령 실행 하기위한 실행 방법 <br>
@@ -268,19 +267,14 @@ nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data
   - rpcport 8545  : HTTP-RPC 서버가 요청을 받기 위해 사용하는 포트 지정
   - rpccorsdomain "*" : 자신의 노드에 RPC로 접속할 IP 주소 지정, 쉼표로 구분해 여러 개를 지정 가능, "*"로 지정하면 모든 IP에서 접속 허용
   - rpcapi "admin,db..."  : RPC를 허가할 명령 지정
-```
-nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,ssh,txpool,personal,web3" 2 >> /Users/jang/data_testnet/geth.log &
-```
+> nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,ssh,txpool,personal,web3" 2 >> /Users/jang/data_testnet/geth.log &
+
 
 ### 2.4.7 Geth 기동 시 계정 잠금 해제
 - Geth 기동 시 지정한 계정을 잠금 해제
   - unlock 0  : 잠금 해제할 계정 지정
   - verbosity 6 : 로그 출력 수준 지정(default=3), 0=slient, 1=error, 2=warn, 3=info, 4=core, 5=debug, 6=detail
-```
-geth --networkid 4949 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,ssh,txpool,personal,web3" --unlock 0 --verbosity 6 console 2>> /Users/jang/data_testnet/geth.log
-```
+> geth --networkid 4949 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,ssh,txpool,personal,web3" --unlock 0 --verbosity 6 console 2>> /Users/jang/data_testnet/geth.log
 
 - Geth 실행 시 파일에 저장한 계정 패스워드 불러와서 실행
-```
-geth --networkid 4949 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,ssh,txpool,personal,web3" --unlock 0 --password /Users/jang/data_testnet/passwd --verbosity 6 console 2>> /Users/jang/data_testnet/geth.log
-```
+> geth --networkid 4949 --nodiscover --maxpeers 0 --datadir /Users/jang/data_testnet --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,ssh,txpool,personal,web3" --unlock 0 --password /Users/jang/data_testnet/passwd --verbosity 6 console 2>> /Users/jang/data_testnet/geth.log
